@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Types;
+use App\Localities;
 
-class TypesController extends Controller
+class LocalitiesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,14 +14,13 @@ class TypesController extends Controller
      */
     public function index()
     {
-        $types = Types::all();
+        $localities = Localities::all();
         
-        return view('types.index',[
-            'types' => $types,
-            'resource' => 'Types',
+        return view('localities.index', [
+           'localities' => $localities,
+           'resource' => 'Localités',
         ]);
     }
-
 
     /**
      * Show the form for creating a new resource.

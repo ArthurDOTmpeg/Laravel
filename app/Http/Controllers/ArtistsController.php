@@ -18,7 +18,7 @@ class ArtistsController extends Controller
         
         return view('artists.index',[
             'artists' => $artists,
-            'resource' => 'artistes',
+            'resource' => 'Artistes',
         ]);
 
     }

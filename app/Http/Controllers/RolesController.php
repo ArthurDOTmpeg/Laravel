@@ -17,7 +17,7 @@ class RolesController extends Controller
         $roles = Roles::all();
         return view('roles.index', [
             'roles' => $roles,
-            'resource' => 'roles',
+            'resource' => 'Rôles',
         ]);
     }
 
