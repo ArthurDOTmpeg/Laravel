@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::get('artists', 'ArtistsController@index');
 Route::get('types', 'TypesController@index');
+Route::get('roles', 'RolesController@index');
