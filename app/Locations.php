@@ -22,10 +22,17 @@ class Locations extends Model
     protected $table = 'locations';
     
     /**
-     * Many locations belogn to one locality
+     * Many locations belong to one locality
      */
     public function localities(){
         return $this->belongsTo('App\Localities');
+    }
+    
+    /**
+     * One location has many shows
+     */
+    public function shows(){
+        return $this->hasMany('App\Shows');
     }
             
    /**
