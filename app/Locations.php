@@ -27,6 +27,9 @@ class Locations extends Model
     public function localities(){
         return $this->belongsTo('App\Localities');
     }
+    public function representations(){
+        return $this->hasMany('App\Representations');
+    }
     
     /**
      * One location has many shows

@@ -22,13 +22,24 @@ class Shows extends Model
     protected $table = 'shows';
     
     /**
-     * One artist can be of different types
+     * Relations
      */
     public function locations()
     {
         return $this->belongsTo('App\Locations');
     }
-
+    public function representations()
+    {
+        return $this->hasMany('App\Representations');
+    }
+    
+    
+    /**
+     * One show has many different artists
+     */
+    public function artists_types(){
+        return $this->hasMany('App\ArtistsTypes');
+    }
    /**
      * Indicates if the model should be timestamped.
      *

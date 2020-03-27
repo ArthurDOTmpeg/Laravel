@@ -18,9 +18,22 @@ class Users extends Authenticatable
     protected $fillable = ['login', 'password', 'firstname',
         'lastname', 'email', 'language', 'role_id'];
     
-    
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
     protected $table = 'users';
 
+    /**
+     * Multiple users can belong to on role
+     * 
+     */
+    public function roles(){
+        
+        return $this->belongsTo('App\roles');
+    }
+    
     /**
      * The attributes that should be cast to native types.
      *
