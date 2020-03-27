@@ -15,12 +15,17 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('locality_id');
             $table->string('slug')->length(60);
             $table->string('designation')->length(60);
             $table->string('address')->length(255);
             $table->string('website')->length(255);
             $table->string('phone')->length(60);
+            $table->unsignedBigInteger('locality_id');
+            $table->foreign('locality_id')
+                ->references('id')
+                ->on('localities')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
         });
     }
 

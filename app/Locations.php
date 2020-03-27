@@ -20,6 +20,13 @@ class Locations extends Model
      * @var string
      */
     protected $table = 'locations';
+    
+    /**
+     * Many locations belogn to one locality
+     */
+    public function localities(){
+        return $this->belongsTo('App\Localities');
+    }
             
    /**
      * Indicates if the model should be timestamped.
