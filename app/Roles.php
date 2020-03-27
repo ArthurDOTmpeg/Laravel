@@ -19,6 +19,15 @@ class Roles extends Model
      * @var string
      */
     protected $table = 'roles';
+    
+    /**
+     * One role has many users
+     * 
+     */
+     public function users()
+    {
+        return $this->hasMany('App\Users', 'roles_id');
+    }
 
    /**
      * Indicates if the model should be timestamped.
