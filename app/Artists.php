@@ -19,6 +19,14 @@ class Artists extends Model
      * @var string
      */
     protected $table = 'artists';
+    
+    /**
+     * One artist can be of different types
+     */
+    public function types()
+    {
+        return $this->belongsToMany('App\Types');
+    }
 
    /**
      * Indicates if the model should be timestamped.
