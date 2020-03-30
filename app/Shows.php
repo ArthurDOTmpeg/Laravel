@@ -33,12 +33,12 @@ class Shows extends Model
         return $this->hasMany('App\Representations');
     }
     
-    
     /**
      * One show has many different artists
      */
-    public function artists_types(){
-        return $this->hasMany('App\ArtistsTypes');
+    public function artists_types()
+    {
+        return $this->belongsToMany('App\ArtistsTypes');
     }
    /**
      * Indicates if the model should be timestamped.

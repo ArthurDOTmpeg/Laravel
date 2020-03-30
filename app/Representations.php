@@ -32,6 +32,10 @@ class Representations extends Model
     {
         return $this->belongsTo('App\Locations');
     }
+    public function users(){
+        
+        return $this->belongsToMany('App\Users');
+    }
 
    /**
      * Indicates if the model should be timestamped.

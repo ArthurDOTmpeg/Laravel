@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateArtistesTypesTable extends Migration
+class CreateArtistsTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateArtistesTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('artistes_types', function (Blueprint $table) {
+        Schema::create('artists_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             
             //artists key
@@ -41,6 +41,6 @@ class CreateArtistesTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artistes_types');
+        Schema::dropIfExists('artists_types');
     }
 }

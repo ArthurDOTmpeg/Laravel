@@ -18,7 +18,7 @@ class CreateRepresentationsTable extends Migration
             $table->dateTime('when');
             
             //Shows foreign key
-            $table->bigInteger('shows_id');
+            $table->unsignedBigInteger('shows_id');
             $table->foreign('shows_id')
                 ->references('id')
                 ->on('shows')
@@ -26,7 +26,7 @@ class CreateRepresentationsTable extends Migration
                 ->onUpdate('restrict');
             
             //Locations foreign key
-            $table->bigInteger('locations_id');
+            $table->unsignedBigInteger('locations_id');
             $table->foreign('locations_id')
                 ->references('id')
                 ->on('locations')

@@ -21,10 +21,11 @@ class ArtistsTypes extends Model
     protected $table = 'artists_types';
     
     /**
-     * One type has different artists
+     * One artist can do multiple shows
      */
-    public function artists()
-    {
+    
+    public function shows(){
+        
         return $this->belongsToMany('App\Shows');
     }
 

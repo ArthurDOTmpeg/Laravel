@@ -21,7 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('lastname')->length(60);
             $table->string('email')->length(100);
             $table->string('language')->length(2);
-            $table->unsignedInteger('roles_id');
+            
+            //Foreign key
+            $table->unsignedBigInteger('roles_id');
             $table->foreign('roles_id')
                 ->references('id')
                 ->on('roles')
